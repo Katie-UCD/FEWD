@@ -3,32 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unit 3 - CSS</title>
-    <link rel="stylesheet" href="css/main.css"/>
+    <title>Intro CSS Class : Home</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Welcome to CSS learning page</h1>
-        <nav>
+        <nav> <!-- this tag was introducted on html 5 version-->
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <main class="my-main">
+
+    <main class="container">
         <section>
-          <h2>About CSS</h2>
-          <p>CSS helps you decorate <strong>your website pages.</strong></p>
+            <h2> About CSS </h2>
+            <p> CSS Cascading Style Sheets language the helps you to decorate your web pages and modify things like 
+                <strong>position, colors, fonts, images,</strong> and many other things. 
+            </p>
         </section>
+
         <section>
-            <h2>Form</h2>
+            <h2> Form Example</h2>
             <form>
-                <label for="name">Name</label>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password"> Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option value="3">Others</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" ></textarea>
+
+                <input type="submit" value="Submit">
             </form>
         </section>
-    </main> 
+    </main>
+
     <footer>
-        <p> &copy; 2024 FEWD</p>
+        <p> &copy; 2024 CSS Learning page powerby Gilberto Santos </p>
     </footer>
 </body>
 </html>

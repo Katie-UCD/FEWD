@@ -26,7 +26,7 @@ header{
 }
 
 header p{
-    width: 50%;
+    width: 80%;
     margin:50px auto 10px;
 }
 #spanPara{
@@ -41,3 +41,12 @@ footer{
     text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+    body {
+    color: red;
+    }
+    .multi-column{
+        columns: 1;
+    
+    }
+}

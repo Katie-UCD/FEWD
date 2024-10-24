@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    background-color: aqua;
+}
+
+.box {
+    background-color: green;
+    color: white;
+    padding: 10px;
+}
+
+@media screen and (max-width: 760px){
+    .container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

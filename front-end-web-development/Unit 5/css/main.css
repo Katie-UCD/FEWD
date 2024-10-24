@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    margin-bottom: 10px;
+}
+main{
+  
+    margin: 20px;
+}
+
+.multi-column{
+    columns: 2;
+    column-gap: 100px;
+    padding-top:10px;
+    column-width: 100px;
+}
+
+header{
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header p{
+    width: 80%;
+    margin:50px auto 10px;
+}
+#spanPara{
+    column-span:all;
+    margin-bottom: 30px;
+}
+
+footer{
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+    color: red;
+    }
+    .multi-column{
+        columns: 1;
+    
+    }
+}

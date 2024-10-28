@@ -1,0 +1,142 @@
+
+    
+
+nav{
+    background-color: var(--blue);
+    color: white;
+    padding:10px;
+    text-align: center;
+}
+nav a{
+    border-left:1px solid white;
+    width: 100%;
+    padding: 10px 200px;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+header{
+    width:100%;
+    height:500px;
+    background-image: url('../img/header.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.superheroes {
+    max-width: 50%;
+   padding: 100px;
+   box-sizing: border-box;
+
+
+  
+}
+.superheroName{
+ background-color: var(--blue);
+ color: white;
+text-align: center;
+box-sizing: border-box;
+
+
+}
+
+.superheroName, img{
+    width: 90%;
+    padding: 10px;
+}
+
+table, tr, td{
+
+    padding: 10px;
+    text-align: left;
+}
+table{
+    border: 2px solid #f2f2f2;
+    border-collapse: collapse;
+    min-width: 400px;
+    font-size: 12px;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+h1{
+    font-weight: 200;
+}
+.rankings{
+    margin: 30px;
+}
+.rankings h1{
+    font-size: medium;
+}
+
+footer{
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    font-weight:200;
+    padding: 10px;
+}
+
+ a{
+
+    text-decoration: none;
+    color:black;
+}
+
+.card-img-top {
+    background-color: var(--blue);
+    width: 100%;
+    background-size: auto;
+  
+}
+
+.card-img-top, img{
+    width: auto;
+    height: 500px;
+}
+
+
+table, tr, td{
+
+    padding: 10px;
+    text-align: left;
+}
+table{
+    border: 2px solid #f2f2f2;
+    border-collapse: collapse;
+    min-width: 400px;
+    font-size: 12px;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+h1{
+    font-weight: 200;
+    font-size: 1em;
+}
+
+.rankings{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin: 30px;
+ 
+}
+.rankings h1{
+    font-size: medium;
+}
+
+@media (max-width: 800px) {
+    .superheroes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    }
+    .rankings{
+        display: block;
+    }
+  }
+

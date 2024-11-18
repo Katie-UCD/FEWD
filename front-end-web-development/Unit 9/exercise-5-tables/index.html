@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5 - Tables</title>
+</head>
+<body>
+   <div id="tableContainer"></div>
+    <div id="sumOutput"></div>
+    <div id="averageOutput"></div>
+    <script>
+        let numbers = [];
+        let input;
+        let tbody = document.getElementById("numberTable");
+
+            do {  
+                input = prompt("Enter a positive number (or enter 0 to quit):");
+                if (!isNaN(input) && input !== null && input.trim() !== "") {
+                    input = Number(input); 
+
+                    if (input > 0) {
+                        numbers.push(input);
+                    } else if (input < 0) {
+                        alert("Please enter a positive number or 0 to quit.");
+                    }
+                } else {
+                    alert("Invalid input. Please enter a valid number.");
+                }
+            } while (input !== 0); 
+
+   
+function generateTable(){  
+             if (numbers.length > 0) {
+                let table = document.createElement("table");
+                table.border = "1";
+
+               
+                let header = table.insertRow();
+                header.insertCell(0).innerText = "Count";
+                header.insertCell(1).innerText = "Value";
+
+                
+                for (let i = 0; i < numbers.length; i++) {
+                    let row = table.insertRow();
+                    row.insertCell(0).innerText = i + 1; // Count (1-based index)
+                    row.insertCell(1).innerText = numbers[i]; // Value
+                }
+
+               
+                document.getElementById("tableContainer").appendChild(table);
+
+}}
+generateTable(numbers);
+let sum =0;
+for (let i = 0; i < numbers.length; i ++){
+    sum += numbers[i];
+}
+
+let average =0;
+for (let i = 0; i < numbers.length; i ++){
+    average += numbers[i];
+    divide = average / numbers.length;
+}
+document.getElementById("sumOutput").innerHTML = sum;
+document.getElementById("averageOutput").innerHTML = divide;
+   
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Stars</title>
+  
+</head>
+<body>
+    <p id="starHolder"> hello</p>
+</body>
+<script>
+         
+let outputStars = '';
+let numberOfStars = prompt("Please senter a number");
+
+while(isNaN(numberOfStars) || numberOfStars <=0){
+alert("You did not enter a number greater than zero");
+numberOfStars = prompt("Enter a number greater than zero?");
+}
+
+for (let i=0; i < numberOfStars; i++ ) {
+outputStars += "*";
+}
+
+document.getElementById("starHolder").innerHTML = outputStars;
+
+</script>
+</html>

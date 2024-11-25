@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6</title>
+    <style>
+        .paraHighlight{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi totam aliquid corporis nam, earum unde voluptates. Magni dicta laboriosam asperiores. Nisi quasi enim doloribus ipsa hic voluptate odio voluptas ullam.</p>
+</br>
+    <p id="para2" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus tempora in facere fuga similique quibusdam exercitationem quae, asperiores porro voluptatem commodi quaerat qui harum maxime veritatis odio, deserunt autem cupiditate!</p>
+</br>
+    <button id="btn1">Click me to change color</button>
+    <button id="btn2">Click me to change color of paragraph 2</button>
+    <button id="btn3">Click me to add a new paragraph</button>
+    
+</body>
+
+<script>
+function changeParaColor(){
+    let para1=  document.getElementById("para1").style.color = "red";
+     let parabkgd=  document.getElementById("para1").style.backgroundColor = "yellow";
+}
+    let btn1 = document.getElementById("btn1");
+
+    btn1.addEventListener("click", () =>{
+        changeParaColor();
+});
+
+
+function changeParaColor2(){
+    let para2=  document.getElementById("para2").style.color = "blue";
+}
+    let btn2 = document.getElementById("btn2");
+
+    btn2.addEventListener("click", () =>{
+         changeParaColor2();
+});
+
+function createPara(){
+    let newPara = document.createElement('div');
+    let newText = document.createTextNode("This is my shiny new paragraph");
+    newPara.appendChild(newText);
+    document.body.insertBefore(newPara, para2.nextSibling);
+};
+ 
+    let btn3 = document.getElementById("btn3");
+
+    btn3.addEventListener("click", () =>{
+        createPara();
+    });
+  
+ para2.addEventListener("mouseover", ()=>{
+    para2.classList.add("paraHighlight");
+ });
+ para2.addEventListener('mouseout', () => {
+            para2.classList.remove('paraHighlight');
+        });
+
+
+let delParas = document.querySelectorAll('p');
+
+
+let allParas = delParas.forEach(deleteBtns)
+
+function deleteBtns(allParas){
+  let newDelBtn = document.createElement('button');
+  let delBtnTx = newDelBtn.textContent = "Delete this paragraph";
+  allParas.appendChild(newDelBtn);
+
+  newDelBtn.addEventListener("click", () =>{
+    allParas.remove();
+    
+  });
+
+
+}
+
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2 - Sums</title>
+</head>
+<body>
+    <script>
+         let numbers = [];
+
+// Loop to prompt for 5 numbers
+    for (let i = 0; i < 5; i++) {
+    let input;
+    
+     input = prompt(`Enter number ${i + 1}:`);
+     while (isNaN(input) || input === null || input.trim() === "");
+
+    // Convert input to a number and store in the array
+    numbers.push(Number(input));
+}
+let sum =0;
+for (let i = 0; i < numbers.length; i ++){
+    sum += numbers[i];
+}
+
+let average =0;
+for (let i = 0; i < numbers.length; i ++){
+    average += numbers[i];
+    divide = average / numbers.length;
+}
+console.log(numbers);
+console.log(sum);   
+console.log(divide);
+
+
+    </script>
+</body>
+</html>

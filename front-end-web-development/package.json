@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "swiper": "^11.1.15",
+    "venobox": "^2.1.8"
+  }
+}

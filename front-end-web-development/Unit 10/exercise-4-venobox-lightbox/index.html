@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venobox</title>
+    <!-- Correct path to the CSS file -->
+    <link rel="stylesheet" href="dist/venobox.min.css" />
+</head>
+<body>
+    <!-- Venobox links -->
+    <a class="my-image-links" data-gall="gallery01" href="../carousel-slider/img/seaside1.jpg"><img src="../carousel-slider/img/seaside1.jpg" width="80%"></a>
+    <a class="my-image-links" data-gall="gallery01" href="../carousel-slider/img/seaside2.jpg"><img src="../carousel-slider/img/seaside2.jpg" width="80%"></a>
+
+    <!-- Venobox script -->
+    <script type="text/javascript" src="dist/venobox.min.js"></script>
+    <script>
+      new VenoBox({
+    selector: '.my-image-links',
+    numeration: true,
+    infinigall: true,
+    share: true,
+    spinner: 'rotating-plane'
+});
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImportMap</title>
+    <script type="ImportMap">
+        {
+            "imports":{
+                "button": "./component/button.js",
+                "moment": "https://cdn.skypack.dev/moment"
+            }
+        }
+    </script>
+    <script type="module">
+        import ButtonHandler from "button";
+        import moment from "moment";
+
+        window.addEventListener("DOMContentLoaded", () =>{
+            const buttonHandler = new ButtonHandler("my-button");
+            console.log(moment("20111031", "YYYYMMDD").fromNow());
+        });
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+    <button id="my-button">Click Me</button>
+</body>
+</html>
